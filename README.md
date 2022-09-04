@@ -6,14 +6,23 @@ things i scoop install
 ```bash
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+# or if you want to run as admin
+# iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
 ```
 
 ## install tools
 
 ```bash
 scoop install git
-scoop bucket add extras  
-scoop install rainmeterscoopl install sublime-text
+scoop bucket add extras
+# scoop install rainmeter
+scoop install sublime-text
+scoop install vscode
+scoop install brave
+
+scoop bucket add games
+# scoop install minecraft # this is not the most uptodate one and you may run into issues with it
+scoop install blockbench
 
 # scoop install hyper
 # k8sscoop install https://raw.githubusercontent.com/Ash258/scoop-Ash258/master/bucket/docker.json  
